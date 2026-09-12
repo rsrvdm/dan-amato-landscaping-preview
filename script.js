@@ -13,11 +13,25 @@ navigation.querySelectorAll('a').forEach((link) => {
   });
 });
 
-document.querySelector('#preview-form').addEventListener('submit', (event) => {
+document.querySelector('#enquiry-form').addEventListener('submit', (event) => {
   event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  const subject = `Website enquiry — ${data.get('project')} — ${data.get('suburb')}`;
+  const body = [
+    `Name: ${data.get('name')}`,
+    `Phone: ${data.get('phone')}`,
+    `Email: ${data.get('email')}`,
+    `Suburb: ${data.get('suburb')}`,
+    `Project: ${data.get('project')}`,
+    '',
+    String(data.get('details')),
+  ].join('\n');
   const toast = document.querySelector('.toast');
   toast.classList.add('show');
   window.setTimeout(() => toast.classList.remove('show'), 4200);
+  window.location.href = `mailto:dan@danamatolandscapes.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 const albumPhotos = {

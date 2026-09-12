@@ -4,12 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Dan Amato Landscaping — landscape construction, pool surrounds, retaining walls and decking from Pacific Palms to Rainbow Flat.">
+  <meta name="theme-color" content="#17201d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dan Amato Landscaping | Outdoor Spaces, Built Properly">
+  <meta property="og:description" content="Landscape construction, pool surrounds, retaining walls and decking from Pacific Palms to Rainbow Flat.">
+  <meta property="og:image" content="https://danamatolandscapes.com.au/hero-pool.jpg">
+  <meta property="og:url" content="https://danamatolandscapes.com.au/">
+  <link rel="canonical" href="https://danamatolandscapes.com.au/">
   <title>Dan Amato Landscaping | Outdoor Spaces, Built Properly</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="layout-fixes.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LandscapingBusiness",
+      "name": "Dan Amato Landscaping",
+      "url": "https://danamatolandscapes.com.au/",
+      "telephone": "+61434710066",
+      "email": "dan@danamatolandscapes.com.au",
+      "areaServed": ["Pacific Palms", "Forster", "Tuncurry", "Nabiac", "Rainbow Flat"],
+      "image": "https://danamatolandscapes.com.au/hero-pool.jpg"
+    }
+  </script>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -178,25 +197,25 @@
         <h2>Planning an outdoor project?</h2>
         <p>Tell us where the property is, what you have in mind and when you would like to get started.</p>
       </div>
-      <form class="quote-form" id="preview-form">
-        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name"></label>
-        <label>Phone<input type="tel" name="phone" autocomplete="tel" placeholder="Best contact number"></label>
-        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@email.com"></label>
-        <label>Suburb<input type="text" name="suburb" placeholder="Project location"></label>
+      <form class="quote-form" id="enquiry-form">
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" placeholder="Best contact number" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@email.com" required></label>
+        <label>Suburb<input type="text" name="suburb" autocomplete="address-level2" placeholder="Project location" required></label>
         <label class="full">What are you planning?<select name="project"><option>Pool landscaping & surrounds</option><option>Retaining wall</option><option>Decking & outdoor living</option><option>Complete landscaping</option><option>Other</option></select></label>
-        <label class="full">A few details<textarea name="details" rows="4" placeholder="Tell us about the site and the work you have in mind"></textarea></label>
+        <label class="full">A few details<textarea name="details" rows="4" placeholder="Tell us about the site and the work you have in mind" required></textarea></label>
         <button class="button button-dark full" type="submit">Send enquiry <span>↗</span></button>
-        <p class="form-note full">Preview form only—contact details and enquiry delivery will be connected before launch.</p>
+        <p class="form-note full">Submitting opens a prepared email to Dan. Prefer to talk? <a href="tel:+61434710066">Call 0434 710 066</a>.</p>
       </form>
     </section>
   </main>
 
   <footer>
     <a class="brand footer-brand" href="#top"><img class="brand-logo" src="logo-original.jpg" alt="Dan Amato Landscaping"></a>
-    <p>Pool surrounds · Retaining walls · Decking · Landscaping</p>
-    <p>Website preview prepared by MidCoast Web Co.</p>
+    <p>Pool surrounds · Retaining walls · Decking · Landscaping<br>ABN 91 773 036 429 · Licence 395143C</p>
+    <p><a href="tel:+61434710066">0434 710 066</a><br><a href="mailto:dan@danamatolandscapes.com.au">dan@danamatolandscapes.com.au</a></p>
   </footer>
-  <div class="toast" role="status" aria-live="polite">Thanks—this is a preview. The live enquiry form will be connected before launch.</div>
+  <div class="toast" role="status" aria-live="polite">Your email app is opening with the enquiry ready to send.</div>
   <script src="script.js"></script>
 </body>
 </html>

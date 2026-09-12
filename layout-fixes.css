@@ -13,3 +13,9 @@
     grid-template-columns: 1fr;
   }
 }
+
+.form-note a,
+footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
